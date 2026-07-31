@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>김윤영 | Backend Developer</title>
+<meta name="description" content="김윤영의 백엔드 개발자 포트폴리오입니다." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ================= HEADER / NAV ================= -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="#home" class="logo">Yun<span>Young</span></a>
+
+    <nav class="nav" id="nav">
+      <a href="#home" class="nav__link active">홈</a>
+      <a href="#about" class="nav__link">소개</a>
+      <a href="#skills" class="nav__link">기술스택</a>
+      <a href="#projects" class="nav__link">프로젝트</a>
+      <a href="#experience" class="nav__link">경력·학력</a>
+      <a href="#contact" class="nav__link">연락처</a>
+    </nav>
+
+    <div class="header__actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="다크모드 전환">
+        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="hero__blob blob-1"></div>
+  <div class="hero__blob blob-2"></div>
+  <div class="hero__blob blob-3"></div>
+
+  <div class="container hero__inner">
+    <p class="hero__eyebrow reveal">👋 안녕하세요, 저는</p>
+    <h1 class="hero__title reveal">
+      <span class="gradient-text">김윤영</span>입니다.
+    </h1>
+    <!-- <h2 class="hero__subtitle reveal">문제를 이해하고 서비스로 구현하는 Backend Developer</h2>
+    <p class="hero__desc reveal">
+      서버, 데이터베이스, API 설계 역량을 바탕으로<br class="br-desktop" />
+      사용자가 실제로 이용할 수 있는 서비스를 만듭니다.
+    </p> -->
+    <p class="hero__desc reveal">
+      문제를 이해하고 서비스로 구현하는 Backend Developer
+    </p>
+    <div class="hero__cta reveal">
+      <a href="#projects" class="btn btn--primary">프로젝트</a>
+      <a href="#contact" class="btn btn--ghost">연락처</a>
+    </div>
+    <div class="hero__socials reveal">
+      <a href="#" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.54 2.87 8.39 6.84 9.75.5.1.68-.22.68-.5 0-.24-.01-1.05-.01-1.9-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.49-1.11-1.49-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.5A10.02 10.02 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/></svg>
+      </a>
+      <a href="#" target="_blank" rel="noopener" aria-label="Blog">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20Z"/></svg>
+      </a>
+      <a href="mailto:yunyoung0914@gmail.com" aria-label="Email">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-down" aria-label="아래로 스크롤">
+    <span></span>
+  </a>
+</section>
+
+<main>
+
+<!-- ================= ABOUT ================= -->
+<section class="section" id="about">
+  <div class="container">
+    <p class="section__eyebrow reveal">ABOUT ME</p>
+    <h2 class="section__title reveal">저를 소개합니다</h2>
+
+    <div class="about__grid">
+      <div class="about__photo reveal">
+        <div class="about__photo-frame">
+          <img src="img/profile.jpg" alt="김윤영 프로필 사진"/>
+        </div>
+      </div>
+
+      <div class="about__content reveal">
+        <p class="about__intro">
+          안녕하세요! 데이터를 이해하는 것에서 나아가, 실제로 사용할 수 있는 서비스로
+          구현하는 것에 관심이 많은 백엔드 개발자 <strong>김윤영</strong>입니다.
+        </p>
+
+        <div class="about__table-wrap">
+          <table class="about__table">
+            <tbody>
+              <tr>
+                <th>전공</th>
+                <td>서울시립대학교 생명과학과</td>
+              </tr>
+              <!-- <tr>
+                <th>개발 계기</th>
+                <td>AWS 바이오 헬스케어 아카데미에서 흉부 X-ray 이미지를 분류하는 딥러닝 모델을 개발했지만, 모델 성능만으로는 서비스가 완성되지 않는다는 것을 느끼고 서버·데이터베이스·배포 환경까지 이해하기 위해 개발을 시작했습니다.</td>
+              </tr> -->
+              <tr>
+                <th>현재</th>
+                <td>삼성청년SW·AI아카데미(SSAFY) 15기 비전공 Java 과정에서 Java, Spring Boot, 데이터베이스, 웹 개발을 학습 중입니다.</td>
+              </tr>
+              <tr>
+                <th>진행 프로젝트</th>
+                <td>플로깅 커뮤니티(가치줍깅), 여행 기록 서비스(PicK), 금융 교육 서비스(Seed-it), 폐렴 진단 보조 서비스(ICXReam)</td>
+              </tr>
+              <tr>
+                <th>핵심 역량</th>
+                <td>
+                  <ul class="about__table-list">
+                    <li>사용자 문제를 기능 요구사항으로 구체화합니다.</li>
+                    <li>데이터와 비즈니스 로직을 구조화합니다.<div class=""></div></li>
+                    <li>프론트엔드와 백엔드의 데이터 흐름을 이해하고 연결합니다.</li>
+                    <!-- <li>팀 프로젝트의 일정과 역할을 조율하는 능력</li> -->
+                    <li>오류의 원인을 끝까지 파고들어 해결합니다.</li>
+                  </ul>
+                </td>
+              </tr>
+              <!-- <tr>
+                <th>강점</th>
+                <td>생명과학, 의료 AI, 대학 행정 업무에서 쌓은 도메인 이해와 협업 경험을 개발 역량과 연결하는 것입니다.</td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- <div class="about__facts">
+          <div class="fact">
+            <span class="fact__num">4</span>
+            <span class="fact__label">진행 프로젝트</span>
+          </div>
+          <div class="fact">
+            <span class="fact__num">5</span>
+            <span class="fact__label">핵심 기술 스택</span>
+          </div>
+          <div class="fact">
+            <span class="fact__num">1</span>
+            <span class="fact__label">팀장 경험</span>
+          </div>
+        </div> -->
+
+        <!-- <a href="#" class="btn btn--outline" download>이력서 다운로드</a> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section class="section section--tint" id="skills">
+  <div class="container">
+    <p class="section__eyebrow reveal">SKILLS</p>
+    <h2 class="section__title reveal">기술 스택</h2>
+    <p class="section__desc reveal">주로 다루는 언어와 도구들입니다.</p>
+
+    <div class="skills__grid">
+      <div class="skill-card reveal" style="--accent:#6c5ce7">
+        <h3>Backend</h3>
+        <ul class="skill-tags">
+          <li>Java</li><li>Spring Boot</li><li>MyBatis</li>
+          <li>MySQL</li><li>JWT</li><li>REST API</li>
+        </ul>
+      </div>
+      <div class="skill-card reveal" style="--accent:#00b8a9">
+        <h3>Frontend</h3>
+        <ul class="skill-tags">
+          <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Vue 3</li>
+          <!-- <li>Pinia</li><li>Axios</li> -->
+        </ul>
+      </div>
+      <div class="skill-card reveal" style="--accent:#ff6b9d">
+        <h3>AI / Data</h3>
+        <ul class="skill-tags">
+          <li>Python</li><li>PyTorch</li><li>CNN</li><li>ResNet</li><li>Grad-CAM</li>
+        </ul>
+      </div>
+      <div class="skill-card reveal" style="--accent:#ffb400">
+        <h3>Infra &amp; Tools</h3>
+        <ul class="skill-tags">
+          <li>AWS</li><li>SageMaker</li><li>CloudWatch</li><li>GitHub</li><li>GitLab</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="section__desc reveal" style="margin:32px 0 0;">
+      현재는 WebRTC, Redis, Kafka 등 실시간 통신과 메시지 큐 영역까지 학습을 확장하고 있습니다.
+    </p>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section class="section" id="projects">
+  <div class="container">
+    <p class="section__eyebrow reveal">PROJECTS</p>
+    <h2 class="section__title reveal">프로젝트</h2>
+    <p class="section__desc reveal">SSAFY 과정에서 직접 기획하고 개발한 프로젝트들입니다.</p>
+
+    <div class="projects__grid" id="projectsGrid">
+
+      <article class="project-card reveal" data-project="gachi">
+        <div class="project-card__thumb" style="background:linear-gradient(135deg,#6c5ce7,#a29bfe)">
+          <span>01</span>
+        </div>
+        <div class="project-card__body">
+          <h3>가치줍깅</h3>
+          <p class="project-card__meta">2026.07 ~ 진행 중 · 6인 팀 · Android</p>
+          <p>GPS 기반 러닝·플로깅 기록과 AI 쓰레기 분류, 최대 6인 그룹 음성통화로 지역 기반 플로깅 커뮤니티를 연결하는 서비스입니다. 서비스 기획과 실시간 음성 통신 구조 설계를 담당했습니다.</p>
+          <ul class="project-card__stack">
+            <li>Spring Boot</li><li>WebRTC/LiveKit</li><li>JWT</li><li>GPS</li>
+          </ul>
+          <div class="project-card__links">
+            <a href="#" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- <article class="project-card reveal" data-project="pick">
+        <div class="project-card__thumb" style="background:linear-gradient(135deg,#0984e3,#74b9ff)">
+          <span>02</span>
+        </div>
+        <div class="project-card__body">
+          <h3>PicK (픽케이)</h3>
+          <p class="project-card__meta">2026.07 ~ 진행 중 · 모바일</p>
+          <p>테마 지도와 방문 스탬프로 국내 여행 장소를 기록하는 모바일 서비스입니다. 앱 전체 화면 구조와 사용자 흐름 설계, UI 목업 직접 제작, Leaflet 기반 지도 화면 구현을 담당했습니다.</p>
+          <ul class="project-card__stack">
+            <li>UI/UX 설계</li><li>Leaflet</li><li>모바일 UX</li>
+          </ul>
+          <div class="project-card__links">
+            <a href="#" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+      </article> -->
+
+      <article class="project-card reveal" data-project="seedit">
+        <div class="project-card__thumb">
+          <img src="img/seedit/shot_card_thumb.jpg" alt="Seed-it 앱 화면 — 투자일지 캘린더 및 AI 피드백" loading="lazy" />
+        </div>
+        <div class="project-card__body">
+          <h3>Seed-it</h3>
+          <p class="project-card__meta">2026.06 · 2인 팀 · 팀장</p>
+          <p>청소년이 투자 이유와 결과를 기록하며 스스로 투자 과정을 학습하는 모의투자 학습일지 플랫폼입니다. 팀장으로서 문제 정의부터 기능 설계, 일정 관리까지 주도했습니다.</p>
+          <ul class="project-card__stack">
+            <li>Spring Boot</li><li>MyBatis</li><li>MySQL</li><li>Vue 3</li>
+          </ul>
+          <div class="project-card__links">
+            <div class="gh-dropdown">
+              <button type="button" class="gh-dropdown__trigger" aria-haspopup="true" aria-expanded="false">GitHub ↗</button>
+              <div class="gh-dropdown__menu" role="menu">
+                <a href="https://github.com/yydd12/seedit-backend" target="_blank" rel="noopener" role="menuitem">Backend ↗</a>
+                <a href="https://github.com/yydd12/seedit-frontend" target="_blank" rel="noopener" role="menuitem">Frontend ↗</a>
+              </div>
+            </div>
+            <button type="button" class="project-card__detail-btn" data-open-project="seedit">자세히 보기 →</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card reveal" data-project="xray">
+        <div class="project-card__thumb">
+          <img src="img/pneumonia/shot_poc_demo.jpg" alt="흉부 X-ray 폐렴 진단 PoC 데모 화면" loading="lazy" />
+        </div>
+        <div class="project-card__body">
+          <h3>흉부 X-ray 폐렴 진단 보조</h3>
+          <p class="project-card__meta">2025.07 · 3인 팀 · AWS 바이오 헬스케어 AI 아카데미</p>
+          <p>지역보건소와 원격판독센터를 연결해 폐렴 진단 워크플로우를 강화하는 의료 AI PoC입니다. ResNet50 기반 병변 분류와 Heatmap 시각화, RAG 기반 소견서 생성을 NLP Data Scientist로 담당했습니다.</p>
+          <ul class="project-card__stack">
+            <li>Python</li><li>PyTorch</li><li>ResNet50</li><li>RAG</li><li>AWS SageMaker</li>
+          </ul>
+          <div class="project-card__links">
+            <a href="https://github.com/yydd12/AWS-SAY-1-Team4" target="_blank" rel="noopener">GitHub ↗</a>
+            <button type="button" class="project-card__detail-btn" data-open-project="xray">자세히 보기 →</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE / EDUCATION ================= -->
+<section class="section section--tint" id="experience">
+  <div class="container">
+    <p class="section__eyebrow reveal">EXPERIENCE</p>
+    <h2 class="section__title reveal">경력 &amp; 학력</h2>
+
+    <div class="timeline">
+      <div class="timeline__item reveal">
+        <div class="timeline__dot"></div>
+        <div class="timeline__content">
+          <span class="timeline__date">2026.01 ~ 진행 중</span>
+          <h3>삼성청년SW·AI아카데미(SSAFY) 15기 비전공 Java 과정</h3>
+          <p>Java, Spring Boot, MySQL, MyBatis, Vue 3 등 웹 백엔드 개발을 학습하며, 금융 교육 서비스, 플로깅 커뮤니티 서비스, 여행 기록 서비스를 팀 프로젝트로 구현하고 있습니다.</p>
+        </div>
+      </div>
+
+      <div class="timeline__item reveal">
+        <div class="timeline__dot"></div>
+        <div class="timeline__content">
+          <span class="timeline__date">2025.03 ~ 2025.09</span>
+          <h3>AWS 바이오 헬스케어 아카데미</h3>
+          <p>Python, PyTorch 기반 딥러닝 모델 개발을 학습하고, 흉부 X-ray 이미지 분류 프로젝트를 통해 AWS 환경에서의 모델 배포를 경험했습니다.</p>
+        </div>
+      </div>
+
+      <div class="timeline__item reveal">
+        <div class="timeline__dot"></div>
+        <div class="timeline__content">
+          <span class="timeline__date">2023.02 ~ 2025.02</span>
+          <h3>대학 행정 업무</h3>
+          <p>문서 작성, 일정 관리, 보고 및 관계자 조율 업무를 수행하며 요구사항 정리와 커뮤니케이션 역량을 쌓았습니다.</p>
+        </div>
+      </div>
+
+      <div class="timeline__item reveal">
+        <div class="timeline__dot"></div>
+        <div class="timeline__content">
+          <span class="timeline__date">2018.03 ~ 2023.02</span>
+          <h3>서울시립대학교 생명과학과</h3>
+          <p>생명과학을 전공하며 생명 현상과 의료 데이터에 대한 도메인 이해를 갖췄고, 이를 의료 AI 프로젝트로 연결했습니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-block">
+      <h3 class="cert-block__title reveal">자격증 &amp; 어학</h3>
+      <div class="cert-grid">
+        <div class="cert-card reveal" style="--accent:#0984e3">
+          <span class="cert-card__label">어학</span>
+          <h4>TOEIC</h4>
+          <p>920점</p>
+        </div>
+        <div class="cert-card reveal" style="--accent:#00b8a9">
+          <span class="cert-card__label">어학</span>
+          <h4>OPIc</h4>
+          <p>IM2</p>
+        </div>
+        <div class="cert-card reveal" style="--accent:#6c5ce7">
+          <span class="cert-card__label">자격증</span>
+          <h4>ADsP</h4>
+          <p>데이터분석 준전문가</p>
+        </div>
+        <div class="cert-card reveal" style="--accent:#ff6b9d">
+          <span class="cert-card__label">자격증</span>
+          <h4>컴퓨터활용능력</h4>
+          <p>1급</p>
+        </div>
+        <div class="cert-card reveal" style="--accent:#ffb400">
+          <span class="cert-card__label">자격증</span>
+          <h4>MOS PowerPoint</h4>
+          <p>Expert</p>
+        </div>
+        <div class="cert-card reveal" style="--accent:#0984e3">
+          <span class="cert-card__label">자격증</span>
+          <h4>MOS Excel</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section" id="contact">
+  <div class="container contact__inner">
+    <p class="section__eyebrow reveal">CONTACT</p>
+    <h2 class="section__title reveal">함께 일해요</h2>
+    <p class="section__desc reveal">함께 문제를 고민하고, 사용자에게 실질적인 도움이 되는 서비스를 만들고 싶습니다.</p>
+
+    <div class="contact__grid">
+      <!-- <form class="contact__form reveal" id="contactForm">
+        <div class="form__row">
+          <label for="name">이름</label>
+          <input type="text" id="name" name="name" placeholder="김윤영" required />
+        </div>
+        <div class="form__row">
+          <label for="email">이메일</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form__row">
+          <label for="message">메시지</label>
+          <textarea id="message" name="message" rows="5" placeholder="전달하고 싶은 내용을 입력해주세요." required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">메시지 보내기</button>
+        <p class="form__status" id="formStatus"></p>
+      </form> -->
+
+      <div class="contact__info reveal">
+        <div class="info-card">
+          <h3>이메일</h3>
+          <a href="mailto:yunyoung0914@gmail.com">yunyoung0914@gmail.com</a>
+        </div>
+        <div class="info-card">
+          <h3>포지션</h3>
+          <p>Backend Developer (Java / Spring)</p>
+        </div>
+        <div class="info-card">
+          <h3>소셜</h3>
+          <div class="hero__socials">
+            <a href="#" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.54 2.87 8.39 6.84 9.75.5.1.68-.22.68-.5 0-.24-.01-1.05-.01-1.9-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.49-1.11-1.49-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.5A10.02 10.02 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/></svg>
+            </a>
+            <a href="#" target="_blank" rel="noopener" aria-label="Blog">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20Z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= PROJECT DETAIL MODAL ================= -->
+<div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="프로젝트 상세 정보">
+    <button type="button" class="modal__close" id="modalClose" aria-label="닫기">✕</button>
+    <div class="modal__body" id="modalBody"></div>
+  </div>
+</div>
+
+<template id="project-modal-seedit">
+  <div class="modal__banner" style="background:linear-gradient(135deg,#00b8a9,#55efc4)">
+    <span class="modal__banner-icon">🌱</span>
+    <h2>Seed-it</h2>
+    <p>하루 5분, 나만의 투자 다이어리 — 청소년 모의투자 학습일지 플랫폼</p>
+  </div>
+
+  <div class="modal__content">
+    <div class="modal__meta">
+      <span>SSAFY 15기 1학기 최종 프로젝트 · 2026.06</span>
+      <span>2인 팀 · 팀장</span>
+    </div>
+    <div class="modal__actions">
+      <a href="https://seedit.r-e.kr" target="_blank" rel="noopener" class="btn btn--primary btn--sm">라이브 데모 보기 ↗</a>
+      <a href="https://github.com/yydd12/seedit-backend" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">Backend ↗</a>
+      <a href="https://github.com/yydd12/seedit-frontend" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">Frontend ↗</a>
+    </div>
+
+    <section class="modal-section">
+      <h3>기획 배경</h3>
+      <p class="modal-section__desc">청소년 주식 투자가 5년 새 684% 급증했지만, 체계적인 금융 교육 없이 시장에 진입하는 경우가 빠르게 늘고 있습니다.</p>
+      <div class="modal-stats">
+        <div class="modal-stat">
+          <span class="modal-stat__num">684%</span>
+          <span class="modal-stat__label">20대 미만 주식 소유자<br>5년간 증가율</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat__num">3.7배</span>
+          <span class="modal-stat__label">미성년자 주식 계좌<br>3년간 증가</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat__num">65.8점</span>
+          <span class="modal-stat__label">20대 금융이해력 점수<br>(전체 평균 66.5점 미달)</span>
+        </div>
+      </div>
+      <p class="modal-section__desc">기존 모의투자 앱은 매매 결과만 남기고 그 사이의 '생각'은 흘려보냅니다. Seed-it은 <strong>매수는 가설, 매도는 복기</strong>로 투자를 결과가 아닌 사이클로 다시 설계했습니다.</p>
+    </section>
+
+    <section class="modal-section">
+      <h3>핵심 기능</h3>
+      <div class="modal-features">
+        <div class="modal-feature">
+          <h4>가설 기반 모의투자</h4>
+          <p>100개 종목 조회 · 매수 가설 작성 · 매도 복기 · 포트폴리오 · 거래 캘린더</p>
+        </div>
+        <div class="modal-feature">
+          <h4>투자일지 &amp; AI 피드백</h4>
+          <p>하루 한 편 투자일지 작성 · 거래 및 일지 기반 Gemini 맞춤 피드백</p>
+        </div>
+        <div class="modal-feature">
+          <h4>금융지식 학습</h4>
+          <p>카테고리별 유튜브 학습 콘텐츠 · 즐겨찾기 · 댓글로 함께 공부하기</p>
+        </div>
+        <div class="modal-feature">
+          <h4>학습 레벨 &amp; 포인트</h4>
+          <p>활동 내역과 연동된 성장 시각화 · 꾸준히 쓸수록 자라는 새싹 키우기</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <h3>기능 화면</h3>
+      <div class="modal-gallery">
+        <figure>
+          <img src="img/seedit/shot_stock_detail.jpg" alt="종목 시세 조회 및 AI 기업 분석 화면" loading="lazy" />
+          <figcaption>시세 조회 · 차트 · 뉴스 · AI 기업 분석</figcaption>
+        </figure>
+        <figure>
+          <img src="img/seedit/shot_buy_sell.jpg" alt="매수 매도 가설 작성 화면" loading="lazy" />
+          <figcaption>매수 = 가설 작성, 매도 = 가설 복기</figcaption>
+        </figure>
+        <figure>
+          <img src="img/seedit/shot_diary_ai.jpg" alt="투자일지 및 AI 피드백 화면" loading="lazy" />
+          <figcaption>투자일지 &amp; Gemini 기반 AI 피드백</figcaption>
+        </figure>
+        <figure>
+          <img src="img/seedit/shot_study_sprout.jpg" alt="학습 콘텐츠 및 새싹 키우기 화면" loading="lazy" />
+          <figcaption>학습 콘텐츠 &amp; 새싹 키우기</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <h3>외부 API · AI 활용</h3>
+      <div class="modal-api-grid">
+        <div class="modal-api"><h4>키움 REST API</h4><p>100개 우량주 시세 수집 · 일별 OHLCV · 펀더멘털<br>Cron 매일 10시 / 16시</p></div>
+        <div class="modal-api"><h4>DART OpenAPI</h4><p>기업 재무제표 수집 · 사업/반기/분기보고서<br>AI 리포트 생성 시 호출</p></div>
+        <div class="modal-api"><h4>Google Gemini</h4><p>gemini-3.5-flash<br>투자일기 AI 피드백 · AI 기업분석 리포트</p></div>
+        <div class="modal-api"><h4>뉴스 RSS</h4><p>한국경제 · 매일경제 · 서울경제<br>종목 관련 뉴스 자동 수집</p></div>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <h3>기술 스택</h3>
+      <div class="modal-stack-grid">
+        <div><h4>Frontend</h4><p>Vue 3 · Pinia · Vue Router · Axios</p></div>
+        <div><h4>Backend</h4><p>Spring Boot 4 · Java 25 · MyBatis · Spring Security · JWT</p></div>
+        <div><h4>Database</h4><p>MySQL 8.0 · 14개 테이블 · BIGINT PK · EBS 영구 저장</p></div>
+        <div><h4>Infra · CI/CD</h4><p>AWS EC2(t3.small) · Nginx · GitHub Actions · SCP+SSH 배포</p></div>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <h3>아키텍처</h3>
+      <figure class="modal-figure">
+        <img src="img/seedit/shot_architecture.jpg" alt="Seed-it 시스템 아키텍처 다이어그램" loading="lazy" />
+        <figcaption>단일 EC2 · Nginx 리버스 프록시 · GitHub Actions 자동 배포</figcaption>
+      </figure>
+    </section>
+
+    <section class="modal-section">
+      <h3>트러블슈팅</h3>
+      <p class="modal-section__desc"><strong>매도 대금이 즉시 잔고에 반영되는 문제</strong> — 정산 개념 없이 매도와 입금을 같은 트랜잭션에서 처리해, 실거래 T+2 결제 규칙이 반영되지 않고 잔고가 과대 계상되었습니다.</p>
+      <div class="modal-trouble">
+        <div class="modal-trouble__card modal-trouble__card--problem">
+          <h4>문제</h4>
+          <p>매도 즉시 현금이 잡혀 잔고가 부풀려지고, 실제 거래와 흐름이 달랐습니다.</p>
+        </div>
+        <div class="modal-trouble__card modal-trouble__card--cause">
+          <h4>원인</h4>
+          <p>정산 개념 없이 매도와 입금을 같은 트랜잭션에서 처리했기 때문입니다.</p>
+        </div>
+        <div class="modal-trouble__card modal-trouble__card--fix">
+          <h4>해결</h4>
+          <p>매도 시 정산 대기 레코드 생성 → T+2 배치가 정산일에 잔고 반영. 매매와 정산을 분리했습니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <h3>담당 내용</h3>
+      <ul class="modal-list">
+        <li>팀장으로서 프로젝트 주제 및 핵심 문제 정의</li>
+        <li>서비스 기능과 사용자 흐름 설계, 요구사항 정리 및 기능 우선순위 결정</li>
+        <li>일정과 역할 분담 관리</li>
+        <li>데이터 구조 및 화면 흐름 논의</li>
+        <li>발표 자료 및 프로젝트 문서 정리</li>
+      </ul>
+    </section>
+
+    <section class="modal-section">
+      <h3>향후 개발 계획</h3>
+      <ul class="modal-list">
+        <li>단타 경고 알림 — 단시간 내 과도한 매매 감지 시 알림 제공</li>
+        <li>실시간 시세 Polling — 장중 1~5분 단위 실시간 시세 갱신</li>
+        <li>소셜 기능 확장 — 팔로우, 일지 공개/비공개, 커뮤니티</li>
+        <li>AI 포트폴리오 분석 — 분산도·섹터·위험도 분석 리포트</li>
+        <li>AI 일지 피드백 고도화 — 거래 동향을 반영한 맞춤형 피드백</li>
+        <li>Push 알림 — 시세 급변·목표가·정산 알림</li>
+      </ul>
+    </section>
+
+    <section class="modal-section modal-section--tryit">
+      <h3>직접 체험해보기</h3>
+      <p class="modal-section__desc">배포된 서비스에서 가설 기반 매매와 AI 피드백을 직접 확인해보세요.</p>
+      <div class="modal-account">
+        <div class="modal-account__row">
+          <span class="modal-account__label">URL</span>
+          <a href="https://seedit.r-e.kr" target="_blank" rel="noopener">seedit.r-e.kr ↗</a>
+        </div>
+        <!-- <div class="modal-account__row">
+          <span class="modal-account__label">이메일</span>
+          <code>testyy@seedit.com</code>
+          <button type="button" class="modal-copy" data-copy="testyy@seedit.com">복사</button>
+        </div>
+        <div class="modal-account__row">
+          <span class="modal-account__label">비밀번호</span>
+          <code>test1234!</code>
+          <button type="button" class="modal-copy" data-copy="test1234!">복사</button>
+        </div> -->
+      </div>
+    </section>
+  </div>
+</template>
+
+<template id="project-modal-xray">
+  <div class="modal__banner" style="background:linear-gradient(135deg,#ff6b9d,#fd79a8)">
+    <span class="modal__banner-icon">🩺</span>
+    <h2>흉부 X-ray 폐렴 진단 보조(ICXReam)</h2>
+    <p>지역보건소 폐렴 진단 워크플로우 강화 서비스 — 원격판독 지원으로 지역 간 의료 인력 격차를 줄이는 의료 AI PoC</p>
+  </div>
+
+  <div class="modal__content">
+    <div class="modal__meta">
+      <span>AWS 바이오 헬스케어 AI 아카데미 · 2025.07</span>
+      <span>3인 팀 · NLP Data Scientist</span>
+      <span>[4조] 바닐라 아이스크림</span>
+    </div>
+    <div class="modal__actions">
+      <a href="https://github.com/yydd12/AWS-SAY-1-Team4" target="_blank" rel="noopener" class="btn btn--primary btn--sm">GitHub ↗</a>
+    </div>
+
+    <section class="modal-section">
+      <h3>기획 배경</h3>
+      <p class="modal-section__desc">차량으로 30분 이내에 보건소·공공의료기관에 접근 가능한 비율은 80~95%에 달하지만, 고령 인구가 많은 지역일수록 영상의학과 전문의는 절대적으로 부족합니다.</p>
+      <div class="modal-stats">
+        <div class="modal-stat">
+          <span class="modal-stat__num">80~95%</span>
+          <span class="modal-stat__label">차량 30분 내<br>공공의료기관 접근률</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat__num">8명·13명</span>
+          <span class="modal-stat__label">충남·경북 영상의학과 전문의 수<br>(수도권 대비 10배↑ 격차)</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat__num">70세+</span>
+          <span class="modal-stat__label">폐렴이 주요 사망원인인<br>고령층 연령대</span>
+        </div>
+      </div>
+      <p class="modal-section__desc">보건소·공공의료시설 자체는 지역 간 분포 차이가 크지 않지만, <strong>전문 의료인력 불균형</strong>이 의료 접근성을 가르는 핵심 요인이었습니다. 국내법상 원격 진료는 불법이지만 <strong>의료인 간 원격 판독은 합법</strong>이라는 점에 착안해, 수도권 전문 의료인력이 원격으로 지방 환자를 지원하고 AI 판독 보조 시스템이 워크플로우 효율을 높이는 방향으로 문제를 재정의했습니다.</p>
+    </section>
+
+    <section class="modal-section">
+      <h3>서비스 흐름</h3>
+      <div class="modal-features">
+        <div class="modal-feature"><h4>① CXR 촬영</h4><p>1차 병원·보건소에서 환자를 촬영</p></div>
+        <div class="modal-feature"><h4>② 병변 위치·규모 디텍팅</h4><p>AI가 폐렴 의심 부위를 탐지</p></div>
+        <div class="modal-feature"><h4>③ 리포트 문구 생성</h4><p>탐지 결과 기반 소견 문구 자동 생성</p></div>
+        <div class="modal-feature"><h4>④ 원격판독 지원</h4><p>AI 결과 기반 소견서 자동완성</p></div>
+        <div class="modal-feature"><h4>⑤ 최종 리포트 작성</h4><p>원격판독센터 판독 전문의가 확정</p></div>
+        <div class="modal-feature"><h4>⑥ 결과·후속조치 안내</h4><p>환자·보호자에게 결과 전달</p></div>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <h3>PoC 데모</h3>
+      <p class="modal-section__desc">OHIF(오픈소스 DICOM Viewer)와 Orthanc PACS 서버로 실제 임상 환경과 동일한 영상 관리 환경을 구현하고, AI 분석 결과와 히트맵, 소견서 초안을 한 화면에서 확인할 수 있도록 했습니다.</p>
+      <figure class="modal-figure">
+        <img src="img/pneumonia/shot_poc_demo.jpg" alt="OHIF 뷰어 기반 PoC 데모 화면: 히트맵 오버레이와 AI 분석 결과 패널" loading="lazy" />
+        <figcaption>실제 동작 화면 — 히트맵 오버레이 + AI Analysis Result(소견·Confidence·Findings)</figcaption>
+      </figure>
+    </section>
+
+    <section class="modal-section">
+      <h3>데이터셋 구축</h3>
+      <p class="modal-section__desc">소아 흉부 영상이 아니면서 폐렴 관련 레이블이 포함된 3개 소스를 검토해 <strong>cxr-pneumonia-5</strong> 데이터셋을 직접 구축했고, RAG용 리포트 텍스트 2,195건을 함께 수집했습니다.</p>
+      <div class="modal-api-grid">
+        <div class="modal-api"><h4>RSNA</h4><p>Normal / Pneumonia / Abnormal 3-class 레이블, 결측치 없어 전량 사용</p></div>
+        <div class="modal-api"><h4>MIMIC-IV</h4><p>폐렴 포함 14종 레이블 중 Pneumonia 관련 소견만 필터링, 판독 리포트와 쌍으로 존재</p></div>
+        <div class="modal-api"><h4>NIH</h4><p>RSNA와 원천 데이터가 동일함을 확인 → Data Leakage 방지를 위해 사용 제외</p></div>
+      </div>
+      <p class="modal-section__desc" style="margin-top:16px;">레이블링 과정에서 부정어·불확실성 문맥 오인식, ViewPosition 오기재, 중복 촬영 등 실제 의료 데이터 특유의 노이즈를 직접 점검하고 일부는 클렌징 규칙을 만들어 해결했습니다.</p>
+    </section>
+
+    <section class="modal-section">
+      <h3>AI 모델 설계 및 학습</h3>
+      <p class="modal-section__desc">딥러닝 깊이가 깊어질수록 발생하는 기울기 소실 문제를 skip-connection으로 완화하는 <strong>ResNet50</strong>을 baseline으로 선정해 Normal/Pneumonia/Abnormal 3-class를 분류했습니다.</p>
+      <figure class="modal-figure">
+        <img src="img/pneumonia/shot_train_result.png" alt="분류 모델 학습 결과: Confusion Matrix, Precision, ROC Curve, Confidence Histogram" loading="lazy" />
+        <figcaption>학습 결과 — Confusion Matrix · Precision · ROC(AUC 0.95/0.89/0.82) · Confidence 분포</figcaption>
+      </figure>
+    </section>
+
+    <section class="modal-section">
+      <h3>Heatmap 기반 판독 근거</h3>
+      <p class="modal-section__desc">모델이 폐야(lung fields)에 집중하도록 전처리한 뒤, Vanilla Gradient 기반 히트맵과 사분면(quadrant)·병변 비율(lesion ratio) 등 정량 지표를 함께 제공해 판독 신뢰성을 강화했습니다.</p>
+      <div class="modal-gallery">
+        <figure>
+          <img src="img/pneumonia/shot_raw.jpg" alt="원본 흉부 X-ray 이미지" loading="lazy" />
+          <figcaption>원본 이미지</figcaption>
+        </figure>
+        <figure>
+          <img src="img/pneumonia/shot_lung_seg.jpg" alt="폐야 분할 전처리 결과" loading="lazy" />
+          <figcaption>폐야 분할(Lung Segmentation) 전처리</figcaption>
+        </figure>
+        <figure>
+          <img src="img/pneumonia/shot_heatmap_lesion.jpg" alt="AI 예측 히트맵과 병변 비율 시각화" loading="lazy" />
+          <figcaption>AI 예측 히트맵 &amp; 병변 비율(Lesion Ratio)</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <h3>RAG 기반 소견서 생성</h3>
+      <p class="modal-section__desc">AI 예측 결과(label·confidence·quadrant·lesion_ratio)를 메타데이터로 저장하고, 판독 리포트는 Vector DB에 임베딩해 <strong>Claude Sonnet 3.7 + RAG</strong>로 소견서 초안을 생성했습니다. 3.7은 3.5 대비 출력 토큰 한도가 대폭 상향(GA 64K)되고 확장 사고(extended thinking) 모드를 지원해, 컨텍스트 요약과 소견 생성의 품질·길이 안정성이 유리하다고 판단해 선정했습니다.</p>
+      <div class="modal-stats">
+        <div class="modal-stat">
+          <span class="modal-stat__num">0.647</span>
+          <span class="modal-stat__label">원본 리포트 vs LLM 생성 결과<br>SBERT cosine similarity 평균</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat__num">188건</span>
+          <span class="modal-stat__label">RAG 소견서 생성 결과<br>정량 평가 샘플 수</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <h3>한계점 및 개선전략</h3>
+      <p class="modal-section__desc">분류 모델은 Overfitting 양상과 일반화 성능 부족이라는 한계가 뚜렷했습니다. 근본적인 해결책은 아니지만 보조적 접근으로 Confidence Threshold 기반 <strong>Soft Triage</strong>를 도입했습니다.</p>
+      <div class="modal-trouble">
+        <div class="modal-trouble__card modal-trouble__card--problem">
+          <h4>한계</h4>
+          <p>Overfitting 양상, 일반화 성능 부족으로 실제 임상 신뢰도 확보에 한계</p>
+        </div>
+        <div class="modal-trouble__card modal-trouble__card--cause">
+          <h4>전략</h4>
+          <p>Confidence Threshold(0.6~0.7)에 따라 판정을 나누는 Soft Triage 도입</p>
+        </div>
+        <div class="modal-trouble__card modal-trouble__card--fix">
+          <h4>결과</h4>
+          <p>Threshold 0.65 기준 정확도 83.91% 달성. 다만 여전히 의사의 적극적 개입이 필요한 중간 단계 전략</p>
+        </div>
+      </div>
+
+      <p class="modal-section__desc" style="margin-top:24px;">생성 모델의 신뢰도를 높이기 위해 이미지·리포트를 함께 학습하는 <strong>GLoRIA(Global-Local Representation Learning)</strong> 멀티모달 프레임워크도 실험했습니다.</p>
+      <figure class="modal-figure">
+        <img src="img/pneumonia/shot_gloria_arch.png" alt="GLoRIA 멀티모달 프레임워크 아키텍처 다이어그램" loading="lazy" />
+        <figcaption>GLoRIA 아키텍처 — 이미지 인코더(ResNet50) · 텍스트 인코더(BioClinicalBERT) 대조 학습</figcaption>
+      </figure>
+      <p class="modal-section__desc" style="margin-top:16px;">실험 결과 SBERT cosine similarity 평균이 GLoRIA 0.608, 기존 RAG 0.647로 <strong>RAG 방식이 더 일관되고 임상적으로 적절한 결과</strong>를 보여, RAG 기반 접근을 최종 채택했습니다.</p>
+    </section>
+
+    <section class="modal-section">
+      <h3>PoC 성과 및 평가</h3>
+      <div class="modal-stats">
+        <div class="modal-stat">
+          <span class="modal-stat__num">71~80</span>
+          <span class="modal-stat__label">클래스별 f1-score<br>(목표 ≥ 75)</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat__num">72.23%</span>
+          <span class="modal-stat__label">전체 Accuracy<br>(목표 ≥ 90%)</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat__num">약 1분</span>
+          <span class="modal-stat__label">촬영→분석→리포트 생성<br>전체 파이프라인 소요시간</span>
+        </div>
+      </div>
+      <p class="modal-section__desc">상용 제품인 루닛(Lunit)과 비교했을 때, 저희 PoC(ICXReam)는 폐렴 단일 병변에 집중하고 DICOM이 아닌 JPEG/REST API로 결과를 제공한다는 차이가 있었습니다.</p>
+      <figure class="modal-figure">
+        <img src="img/pneumonia/shot_lunit_compare.jpg" alt="상용 제품 루닛의 이상부위 비교 분석 화면 (비교 참고용)" loading="lazy" />
+        <figcaption>비교 참고 — 상용 제품 루닛(Lunit)의 과거·현재 영상 비교 판독 화면</figcaption>
+      </figure>
+    </section>
+
+    <section class="modal-section">
+      <h3>기술 스택</h3>
+      <div class="modal-stack-grid">
+        <div><h4>Language</h4><p>Python · JavaScript</p></div>
+        <div><h4>AI / Infra</h4><p>AWS EC2 · SageMaker AI · Bedrock · OpenSearch</p></div>
+        <div><h4>Open Source</h4><p>OHIF Web Viewer · Orthanc DICOM Server</p></div>
+        <div><h4>Framework</h4><p>PyTorch · FastAPI · React · Docker · GitHub Actions</p></div>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <h3>팀 구성 및 담당 내용</h3>
+      <p class="modal-section__desc">이금희(팀장·구현) · 김윤영(NLP Data Scientist) · 이주미(CV Data Scientist) 3인 팀으로 진행했습니다. NLP Data Scientist로서 다음을 담당했습니다.</p>
+      <ul class="modal-list">
+        <li>RAG용 판독 리포트 텍스트 데이터 수집 및 전처리(2,195건)</li>
+        <li>Claude Sonnet 3.7 기반 RAG 소견서 생성 파이프라인 설계 및 구현</li>
+        <li>SBERT cosine similarity 기반 생성 결과 정량 평가</li>
+        <li>GLoRIA 멀티모달 프레임워크 실험 참여 및 RAG 대비 성능 비교</li>
+        <li>PoC 아키텍처 관련 팀 내 질의응답 지원</li>
+      </ul>
+    </section>
+
+    <section class="modal-section">
+      <h3>배운 점 &amp; 향후 계획</h3>
+      <p class="modal-section__desc">AI 모델을 만드는 것과 사용자가 실제로 이용할 수 있는 서비스를 만드는 것은 서로 다른 문제라는 점을 체감했습니다. 이 경험이 서버·API·데이터베이스 중심의 백엔드 개발을 본격적으로 학습하게 된 계기가 되었습니다.</p>
+      <ul class="modal-list">
+        <li>환자용 검진결과 안내 서비스 — 메디컬 문해력 수준에 맞춘 결과 설명 제공</li>
+        <li>실시간 시세성 데이터 반영 등 판독 워크플로우 자동화 범위 확대</li>
+        <li>분류 모델 일반화 성능 개선 및 임상 검증 데이터 확충</li>
+      </ul>
+    </section>
+  </div>
+</template>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <p>&copy; <span id="year"></span> 김윤영. All rights reserved.</p>
+    <a href="#home" class="footer__top">맨 위로 ↑</a>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
