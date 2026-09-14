@@ -1,5 +1,6 @@
 # Draft / working files (not part of the deployed site)
 content.md
 portfolio_content*.md
-portfolio.pdf
+portfolio*.pdf
 .claude/
+portfolio-print.html

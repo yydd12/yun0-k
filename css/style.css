@@ -979,6 +979,11 @@ body.modal-open { overflow: hidden; }
 }
 
 /* ===================== Print ===================== */
+/* 프로젝트 상세 펼침 블록: 인쇄용 사본(tools/build-pdf.py)에서만 생성된다 */
+.print-detail { display: none; }
+
+@page { size: A4 landscape; margin: 12mm; }
+
 @media print {
   * {
     -webkit-print-color-adjust: exact !important;
@@ -986,17 +991,76 @@ body.modal-open { overflow: hidden; }
     color-adjust: exact !important;
   }
   .reveal { opacity: 1 !important; transform: none !important; }
-  .header { position: static !important; }
-  .theme-toggle, .hamburger, .scroll-down,
-  .modal-overlay, .gh-dropdown__menu,
+
+  /* 종이에서 의미 없는 UI */
+  .header, .hero__blob, .theme-toggle, .hamburger, .scroll-down,
+  .modal-overlay, .gh-dropdown__menu, .footer__top,
+  .project-card__detail-btn,
   .contact__form, #contactForm { display: none !important; }
-  .hero { min-height: auto; padding: 60px 0; }
-  .section { padding: 48px 0; }
-  a { text-decoration: none; }
+
+  a { text-decoration: none; color: inherit; }
 
   .gradient-text, .fact__num {
     background: none !important;
     -webkit-text-fill-color: var(--purple) !important;
     color: var(--purple) !important;
   }
+
+  /* 인쇄 레이아웃 폭은 ~774px라 모바일 분기에 걸린다 — 데스크톱 배치로 되돌림 */
+  .about__grid { grid-template-columns: 250px 1fr; gap: 40px; }
+  .about__photo { max-width: none; margin: 0; }
+  .about__photo-frame { height: auto; width: 100%; }
+  .contact__grid { grid-template-columns: 1fr; }
+
+  /* 가로 페이지는 폭이 넓다 — 다단 유지 */
+  .skills__grid, .cert-grid { grid-template-columns: repeat(2, 1fr); }
+  .projects__grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .project-card__thumb { height: 68px; }
+  .project-card__body { padding: 10px 16px; }
+
+  /* ---------- 페이지 분할 ---------- */
+  .hero {
+    min-height: 0;
+    padding: 0;
+    height: 180mm;                /* A4 가로 한 장 = 표지 */
+    display: flex;
+    align-items: center;
+    break-after: page;
+  }
+  .section { padding: 0 0 8px; }
+  #about, #skills, #projects, #contact { break-before: page; }
+  #experience { padding-top: 24px; }
+
+  /* 제목만 페이지 끝에 남기지 않기 */
+  .section__eyebrow, .section__title, .section__desc,
+  h1, h2, h3, h4 { break-after: avoid; }
+  .section__title { margin-bottom: 8px; }
+  .section__desc { margin-bottom: 20px; }
+
+  /* 한 덩어리로 읽히는 것은 자르지 않기 */
+  .about__grid, .about__photo, .about__table-wrap, .about__facts, .fact,
+  .skill-card, .project-card, .timeline__item, .cert-card,
+  .info-card, .skill-tags,
+  tr, img, figure, pre { break-inside: avoid; }
+
+  p, li, td { orphans: 3; widows: 3; }
+
+  /* ---------- 프로젝트 상세 ---------- */
+  .print-detail {
+    display: block;
+    break-before: page;
+    border-radius: 0;
+  }
+  .print-detail .modal__banner { padding: 26px 32px; border-radius: 0; }
+  .print-detail .modal__content { padding: 24px 8px 0; }
+  .print-detail .modal__actions { margin-bottom: 24px; }
+
+  .modal-section { margin-bottom: 26px; }
+  .modal-section h3 { break-after: avoid; }
+
+  .modal-stat, .modal-feature, .modal-api, .modal-trouble__card,
+  .modal-stack-grid > div, .modal-gallery figure,
+  .modal-figure { break-inside: avoid; }
+
+  .modal-gallery img, .modal-figure img { max-height: 105mm; object-fit: contain; }
 }
