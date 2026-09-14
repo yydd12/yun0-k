@@ -12,7 +12,7 @@ import io, os, re, shutil, subprocess, sys, tempfile
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, 'index.html')
 TMP = os.path.join(ROOT, 'portfolio-print.html')   # 임시 사본 (상대경로 때문에 프로젝트 루트에 생성)
-OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, 'portfolio.pdf')
+OUT = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else os.path.join(ROOT, 'portfolio.pdf')
 
 CHROME = next((p for p in (
     r'C:\Program Files\Google\Chrome\Application\chrome.exe',
