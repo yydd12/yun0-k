@@ -212,18 +212,19 @@
     <div class="projects__grid" id="projectsGrid">
 
       <article class="project-card reveal" data-project="gachi">
-        <div class="project-card__thumb" style="background:linear-gradient(135deg,#6c5ce7,#a29bfe)">
-          <span>01</span>
+        <div class="project-card__thumb">
+          <img src="img/gachi/shot_home_map.jpg" alt="가치줍깅 홈 · 수거 지점 지도 화면" loading="lazy" />
         </div>
         <div class="project-card__body">
           <h3>가치줍깅</h3>
-          <p class="project-card__meta">2026.07 ~ 진행 중 · 6인 팀 · Android</p>
-          <p>GPS 기반 러닝·플로깅 기록과 AI 쓰레기 분류, 최대 6인 그룹 음성통화로 지역 기반 플로깅 커뮤니티를 연결하는 서비스입니다. 서비스 기획과 실시간 음성 통신 구조 설계를 담당했습니다.</p>
+          <p class="project-card__meta">2026.07 ~ 2026.08 · 6인 팀 · PL / Back-End</p>
+          <p>동네 주민이 함께 뛰며 쓰레기를 줍고, 사진 한 장으로 AI가 종류를 분류해주는 위치 기반 소셜 플로깅 서비스입니다. PL로서 PostGIS 수거 지점 클러스터링, Redis 장애 대응, 팀 개발 프로세스 설계를 담당했습니다.</p>
           <ul class="project-card__stack">
-            <li>Spring Boot</li><li>WebRTC/LiveKit</li><li>JWT</li><li>GPS</li>
+            <li>Spring Boot</li><li>PostGIS</li><li>Redis</li><li>LiveKit</li>
           </ul>
           <div class="project-card__links">
-            <a href="#" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://github.com/yydd12/gachijoopging" target="_blank" rel="noopener">GitHub ↗</a>
+            <button type="button" class="project-card__detail-btn" data-open-project="gachi">자세히 보기 →</button>
           </div>
         </div>
       </article>
@@ -798,6 +799,162 @@
         <li>실시간 시세성 데이터 반영 등 판독 워크플로우 자동화 범위 확대</li>
         <li>분류 모델 일반화 성능 개선 및 임상 검증 데이터 확충</li>
       </ul>
+    </section>
+  </div>
+</template>
+
+<template id="project-modal-gachi">
+  <div class="modal__banner" style="background:linear-gradient(135deg,#6c5ce7,#a29bfe)">
+    <span class="modal__banner-icon">🧺</span>
+    <h2>가치줍깅</h2>
+    <p>동네 주민이 함께 뛰며 쓰레기를 줍고, 사진 한 장으로 AI가 종류·개수를 세어주는 위치 기반 소셜 플로깅 서비스</p>
+  </div>
+
+  <div class="modal__content">
+    <div class="modal__meta">
+      <span>SSAFY 15기 · 팀 사이사이(A702) · 2026.07 ~ 2026.08(6주)</span>
+      <span>6인 팀 · PL / Back-End</span>
+    </div>
+    <div class="modal__actions">
+      <a href="https://github.com/yydd12/gachijoopging" target="_blank" rel="noopener" class="btn btn--primary btn--sm">GitHub ↗</a>
+    </div>
+
+    <section class="modal-section">
+      <h3>기획 배경</h3>
+      <p class="modal-section__desc">러닝 인구는 계속 늘고 있지만, 기존 플로깅 앱은 반짝 유행 후 관심이 식고 있었습니다. 러닝 앱과 플로깅 앱 사이의 빈틈 — 꾸준히 움직이며 자연스럽게 줍고, 혼자가 아니라 함께할 수 있는 경험 — 을 채우는 서비스로 가치줍깅을 기획했습니다.</p>
+      <div class="modal-stats">
+        <div class="modal-stat">
+          <span class="modal-stat__num">1,000만</span>
+          <span class="modal-stat__label">국내 러닝 인구<br>(한국갤럽 추정, 2025)</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat__num">+79.6%</span>
+          <span class="modal-stat__label">'러닝' 검색지수 증가<br>(2023 → 2025)</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat__num">-52.9%</span>
+          <span class="modal-stat__label">'플로깅' 검색지수 하락<br>(2022년 정점 이후)</span>
+        </div>
+      </div>
+      <p class="modal-section__desc">Pirika(일본), Litterati(미국), 제주플로깅 등 기존 서비스는 개인 활동 기록에 머물러 있다는 점에도 주목해, 활동·모임·AI 분류·통계를 하나로 연결하는 방향을 잡았습니다.</p>
+    </section>
+
+    <section class="modal-section">
+      <h3>핵심 기능</h3>
+      <div class="modal-features">
+        <div class="modal-feature">
+          <h4>홈 · 줍깅</h4>
+          <p>지도에서 우리 동네 수거 현황 확인, 혼자 또는 근처 사람과 활동 시작</p>
+        </div>
+        <div class="modal-feature">
+          <h4>AI 쓰레기 분류</h4>
+          <p>사진 한 장으로 종류를 자동 인식(신뢰도 표시), 필요하면 직접 수정</p>
+        </div>
+        <div class="modal-feature">
+          <h4>모이깅 · 실시간 참여</h4>
+          <p>주변 모임 탐색·생성, 그룹 채팅과 음성 통화로 함께 활동</p>
+        </div>
+        <div class="modal-feature">
+          <h4>기록 · 피드 · 프로필</h4>
+          <p>활동 경로와 수거 통계를 자동 정리, 피드로 공유하고 댓글로 소통</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <h3>기능 화면</h3>
+      <div class="modal-gallery">
+        <figure>
+          <img src="img/gachi/shot_home_map.jpg" alt="홈 화면과 수거 지점 지도" loading="lazy" />
+          <figcaption>홈 · 수거 지점 지도</figcaption>
+        </figure>
+        <figure>
+          <img src="img/gachi/shot_ai_sort.jpg" alt="AI 쓰레기 분류 화면" loading="lazy" />
+          <figcaption>줍깅 · AI 쓰레기 분류</figcaption>
+        </figure>
+        <figure>
+          <img src="img/gachi/shot_meetup.jpg" alt="모이깅 실시간 참여 화면" loading="lazy" />
+          <figcaption>모이깅 · 실시간 참여</figcaption>
+        </figure>
+        <figure>
+          <img src="img/gachi/shot_feed_profile.jpg" alt="기록 피드 프로필 화면" loading="lazy" />
+          <figcaption>기록 · 피드 · 프로필</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <h3>시스템 아키텍처</h3>
+      <p class="modal-section__desc">단일 EC2 컨테이너 구성으로, Nginx가 TLS·라우팅·이미지 서빙을 한곳에서 담당하고 Spring Boot API 뒤로 PostGIS·Redis·AI 추론·미디어 중계를 분리했습니다.</p>
+      <figure class="modal-figure">
+        <img src="img/gachi/shot_architecture.jpg" alt="가치줍깅 시스템 아키텍처 다이어그램" loading="lazy" />
+        <figcaption>클라이언트 · 엣지(Nginx/LiveKit) · 애플리케이션(Spring Boot) · 데이터·AI 4계층 구조</figcaption>
+      </figure>
+    </section>
+
+    <section class="modal-section">
+      <h3>구현 지표 <span style="font-weight:400;color:var(--text-muted);font-size:.8rem;">(팀 전체 저장소 기준)</span></h3>
+      <div class="modal-stats">
+        <div class="modal-stat">
+          <span class="modal-stat__num">70개</span>
+          <span class="modal-stat__label">REST API<br>모바일 58 · 관리자 12</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat__num">1,563개</span>
+          <span class="modal-stat__label">테스트 케이스<br>백엔드 1,175 · Android 388</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat__num">28개</span>
+          <span class="modal-stat__label">DB 테이블<br>Flyway 마이그레이션 13개</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <h3>AI 에이전트 주도 개발 프로세스</h3>
+      <p class="modal-section__desc">기획이 지연되어 개발 기간이 일주일도 남지 않은 상황에서, PL로서 <strong>Plan → TDD → QA</strong> 흐름의 팀 전용 플러그인을 설계하고 Jira·GitLab·CLI를 연결해 이슈 선택부터 계획·구현·검증·피드백까지 이어지는 공통 절차를 만들었습니다. 문서로만 적어둔 규칙은 지켜지지 않아, 검사 자체를 스킬과 CI로 옮겨 강제했습니다.</p>
+      <p class="modal-section__desc">이 절차로 팀 전체가 6주간 아래와 같은 결과를 만들어냈습니다.</p>
+      <div class="modal-stats">
+        <div class="modal-stat">
+          <span class="modal-stat__num">90개</span>
+          <span class="modal-stat__label">이슈 단위<br>worktree 세션</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat__num">586개</span>
+          <span class="modal-stat__label">커밋<br>전량 MR 경유</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat__num">3지점</span>
+          <span class="modal-stat__label">7단계 중<br>사람 최종 승인 지점</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <h3>기술 스택</h3>
+      <div class="modal-stack-grid">
+        <div><h4>Mobile</h4><p>Android · Kotlin · Retrofit 3 · OkHttp 5 · CameraX · 카카오맵</p></div>
+        <div><h4>Backend</h4><p>Spring Boot · Java 21 · JWT · QueryDSL · Flyway</p></div>
+        <div><h4>Database</h4><p>PostgreSQL 16 · PostGIS · Redis 7(GEO)</p></div>
+        <div><h4>Infra</h4><p>AWS EC2 · Docker · Nginx(secure_link) · GitLab CI · Grafana</p></div>
+      </div>
+    </section>
+
+    <section class="modal-section">
+      <h3>담당 내용</h3>
+      <ul class="modal-list">
+        <li>AI 쓰레기 분류 결과와 백엔드 서비스 연동</li>
+        <li>PostGIS 기반 수거 지점 클러스터링 구현</li>
+        <li>Redis 장애·성능 저하 시 대체 흐름 설계</li>
+        <li>촉박한 일정에서 팀 AI 개발 환경과 Plan/TDD/QA 공통 절차 설계</li>
+        <li>GitLab·CLI 연동으로 팀원들이 병렬로 개발할 수 있는 작업 분리 지원</li>
+        <li>발표자료·영상 포트폴리오 제작, 실사용 테스트와 개선 참여</li>
+      </ul>
+    </section>
+
+    <section class="modal-section">
+      <h3>배운 점</h3>
+      <p class="modal-section__desc">촉박한 상황에서 개인 작업량만 늘리는 대신, 팀 전체가 같은 계획·테스트·검증 흐름으로 병렬 개발할 수 있는 구조를 만드는 것이 더 나은 해결책이라는 것을 배웠습니다.</p>
     </section>
   </div>
 </template>
