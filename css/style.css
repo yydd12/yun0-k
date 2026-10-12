@@ -489,6 +489,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .project-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
@@ -519,7 +521,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .project-card:hover .project-card__thumb img { transform: scale(1.05); }
 
-.project-card__body { padding: 24px; }
+.project-card__body { padding: 24px; display: flex; flex-direction: column; flex: 1; }
 .project-card__body h3 { font-size: 1.15rem; margin-bottom: 6px; }
 .project-card__meta {
   font-family: var(--font-mono);
@@ -543,12 +545,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: var(--purple);
 }
 
-.project-card__links { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.project-card__links { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-top: auto; padding-top: 16px; }
 .project-card__links a {
   font-size: .86rem;
   font-weight: 600;
   color: var(--text);
-  /* border-bottom: 2px solid var(--purple); */
+  border-bottom: 2px solid var(--purple);
   padding-bottom: 2px;
   transition: color var(--transition);
 }
@@ -717,6 +719,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .modal-feature p { font-size: .85rem; color: var(--text-muted); line-height: 1.6; }
 
 .modal-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.modal-gallery--stack { grid-template-columns: 1fr; justify-items: center; }
+.modal-gallery--stack img { width: auto; max-width: 100%; margin-left: auto; margin-right: auto; }
 .modal-gallery figure { margin: 0; }
 .modal-gallery img {
   width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);
